@@ -11,6 +11,12 @@ public class Main {
 
     }
 
+    /**
+     * Funkcija skaiciuojanti pirmo ir antro skaiciaus daugyba
+     * @param num1 pirmas skaicius
+     * @param num2 antras skaicius
+     * @return grazinamas atsakymas
+     */
     public static String multiply(String num1, String num2) {
 
         if(num1.equals("0") || num2.equals("0")) {
@@ -47,7 +53,7 @@ public class Main {
                 int saugoti = ats.charAt(dabartinePozicija) - '0';
                 int daugyba = skaitmuo1 * skaitmuo2 + saugoti;
 
-                //Nustatome kiekvieno sudauginto skaitmens vieta daugybos rezultate.
+                //Nustatoma kiekvieno sudauginto skaitmens vieta daugybos rezultate
 
                 ats.setCharAt(dabartinePozicija, (char)(daugyba % 10 + '0'));
 
