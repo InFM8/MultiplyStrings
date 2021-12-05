@@ -24,34 +24,37 @@ public class Main {
         sk2.reverse();
 
         //Issaugome sandaugos rezultata kiekvieno skaitmens antro ir pirmo skaiciaus.
-
+// To store the multiplication result of each digit of secondNumber with firstNumber.
         int rez = sk1.length() + sk2.length();
         StringBuilder ats = new StringBuilder();
         for(int i = 0; i < rez; ++i) {
             ats.append(0);
         }
-        for(int antraVieta = 0; antraVieta < sk2.length(); antraVieta++) {
-            int digit2 = sk2.charAt(antraVieta) - '0';
+        for(int i = 0; i < sk2.length(); i++) {
+            int skaitmuo2 = sk2.charAt(i) - '0';
+//kiekviena skaitmeni antro skaiciaus dauginame visus skaitmenis pirmo skaiciaus
+// For each digit in secondNumber multiply the digit by all digits in firstNumber.
 
-            for (int pirmaVieta = 0; pirmaVieta < sk1.length(); pirmaVieta++) {
-                int digit1 = sk1.charAt(pirmaVieta) - '0';
+            for (int j = 0; j < sk1.length(); j++) {
+                int skaitmuo1 = sk1.charAt(j) - '0';
 
-                //
                 // Nuliniai skaiciai priklauso nuo vietos antro skaitmens, antro skaiciaus ir
                 // pirmo skaitmens, pirmo skaiciaus.
-
-                int dabartinePozicija = pirmaVieta + antraVieta;
+                int dabartinePozicija = j + i;
 
                 // Skaitmens "dabartinePozicija" pozicija siuo metu Stringo "ats"
+                // inicijuojame dabartinePozicija - 'saugoti' ir sumuojame su esamu rezultatu
                 int saugoti = ats.charAt(dabartinePozicija) - '0';
-                int daugyba = digit1 * digit2 + saugoti;
+                int daugyba = skaitmuo1 * skaitmuo2 + saugoti;
 
-                //Nustatome pirma vieta daugybos rezultate.
+                //Nustatome kiekvieno sudauginto skaitmens vieta daugybos rezultate.
+
                 ats.setCharAt(dabartinePozicija, (char)(daugyba % 10 + '0'));
 
-                // "saugoti" desimciu daugybos vietu rezultatus pridedant i kita
-                // pozicija i atsakymo masyva
+                // Issaugome daugybos rezultata "desimtainiu skaiciu abeceleje"
                 int reiksme = (ats.charAt(dabartinePozicija + 1) - '0') + daugyba / 10;
+
+                // kiekviena gauta reiksme pridedame i kita pozicija
                 ats.setCharAt(dabartinePozicija + 1, (char)(reiksme + '0'));
             }
         }
