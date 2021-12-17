@@ -40,7 +40,7 @@ public class Main {
         for(int i = 0; i < sk2.length(); i++) {
             int skaitmuo2 = sk2.charAt(i) - '0';
 
-//kiekviena skaitmeni antro skaiciaus dauginame visus skaitmenis pirmo skaiciaus
+//kiekviena skaitmeni antro skaiciaus dauginame visus skaitmenis pirmo skaiciaus (dauginimas stulpeliu)
 
             for (int j = 0; j < sk1.length(); j++) {
                 int skaitmuo1 = sk1.charAt(j) - '0';
