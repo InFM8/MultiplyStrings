@@ -27,8 +27,8 @@ public class MultiplyStrings {
         StringBuilder sk1 = new StringBuilder(num1);
         StringBuilder sk2 = new StringBuilder(num2);
 
-        sk1.reverse(); // 321
-        sk2.reverse(); // 654
+        sk1.reverse();
+        sk2.reverse(); 
 
         int rez = sk1.length() + sk2.length(); // rez = 6;
 
