@@ -12,7 +12,6 @@ public class MultiplyStrings {
 
     /**
      * Funkcija skaiciuojanti pirmo ir antro skaiciaus sandauga
-     *
      * @param num1 pirmas skaicius
      * @param num2 antras skaicius
      * @return grazinamas atsakymas
@@ -28,7 +27,7 @@ public class MultiplyStrings {
         StringBuilder sk2 = new StringBuilder(num2);
 
         sk1.reverse();
-        sk2.reverse(); 
+        sk2.reverse();
 
         int rez = sk1.length() + sk2.length(); // rez = 6;
 
