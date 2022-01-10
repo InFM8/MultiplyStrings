@@ -38,7 +38,6 @@ public class MultiplyStrings {
         for (int i = 0; i < sk2.length(); i++) {
             int skaitmuo2 = sk2.charAt(i) - '0';
 
-
             for (int j = 0; j < sk1.length(); j++) {
                 int skaitmuo1 = sk1.charAt(j) - '0';
 
@@ -49,15 +48,13 @@ public class MultiplyStrings {
 
                 //Nustatoma skaitmens vieta rezultate tarp vienetu
                 ats.setCharAt(dabartinePozicija, (char) (daugyba % 10 + '0'));
-                                                                         //800000, 820000, 826000, 876000,
-                                                                         //876000, 876500, 878500, 878300, 878340
+
                 // Issaugome daugybos rezultata tarp desimciu
                 int reiksme = (ats.charAt(dabartinePozicija + 1) - '0') + daugyba / 10; //1, 0, 7, 1, 0, 6, 1, 0
 
                 // kiekviena gauta reiksme pridedame i sekancia pozicija
                 ats.setCharAt(dabartinePozicija + 1, (char) (reiksme + '0'));
-                                                                         //810000, 831000, 837000, 888000,
-            }                                                            //888100, 888600, 880800, 880610, 880650
+            }
         }
 
         if (ats.charAt(ats.length() - 1) == '0') {
